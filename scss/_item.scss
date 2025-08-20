@@ -1,0 +1,82 @@
+.item{
+    &-wrapper{
+        margin: 73px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        background: #FFFFFF;
+    }
+    &-card{
+        padding: 41px;
+        display: flex;
+        gap: 12.6px;
+        align-items: center;
+        max-width: 354px;
+        border: 1px solid #F6F6F6;
+        border-radius: 22px;
+        &__image{
+            img{
+                width: 100%;
+                height: auto;
+                object-fit: contain; // rasm siqilib ketmasin
+                display: block; 
+            }
+        }
+        &__body{
+            h3{
+                font-size: 36px;
+            }
+            p{
+                max-width: 173px;
+            }
+        }
+    }
+}
+
+@media (max-width:900px) {
+    .item{
+        &-wrapper{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &-card{
+            &__body{
+                h3{
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width:700px) {
+    .item{
+        &-wrapper{
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &-card{
+            &__body{
+                h3{
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+    
+}
+@media (max-width: 500px) {
+    .item{
+        &-wrapper{
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &-card{
+            flex-direction: column;
+            text-align: center;
+        }
+        &__image{
+            max-width: 200px;
+            margin: 0 auto;
+        }
+    }
+  }
+  
